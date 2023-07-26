@@ -1,0 +1,57 @@
+\documentclass[a4paper, landscape]{article}
+
+%\usepackage[a4paper, landscape]{geometry}
+\usepackage{tikz}
+\usepackage{palatino}
+\usepackage{anyfontsize}
+\usepackage{xcolor}
+\usepackage[T1]{fontenc}
+
+\begin{document}
+\pagestyle{empty}
+\setlength{\textwidth}{25cm}
+\setlength{\textheight}{16cm}
+\setlength{\hsize}{25cm}
+\setlength{\vsize}{16cm}
+\setlength{\oddsidemargin}{0cm}
+\begin{tikzpicture}[overlay, remember picture]
+\filldraw[cyan,opacity=0.5] (current page.north west) -- +(0,-5) -- +(55,5) -- cycle;
+\filldraw[gray,opacity=0.5] (current page.north east) -- +(0,-5) -- +(-55,5) -- cycle;
+\filldraw[gray,opacity=0.5] (current page.south west) -- +(0,4) -- +(44,-4) -- cycle;
+\filldraw[cyan,opacity=0.5] (current page.south east) -- +(0,4) -- +(-44,-4) -- cycle;
+\draw[cyan,very thick] (2.075,-0.3) -- +(19.35,0) -- +(19.35,-1.65) -- +(0,-1.65) -- +(0,0);
+\foreach \y in {3,4,...,12}{
+   \draw[cyan,very thick] (2.075,-0.15*\y) -- +(19.35,0);
+}
+\foreach \x in {1,2,...,42}{
+	 \draw[cyan,very thick] (2.075+0.45*\x,-0.3) --+ (0,-1.65);
+}
+\draw[cyan,very thick] (2.075,-0.75) --+ (-0.45,0) --+ (-0.45,-0.75) --+ (0,-0.75);
+\draw[cyan,very thick] (21.425,-0.75) --+ (0.45,0) --+ (0.45,-0.75) --+ (0,-0.75);
+\node[color={rgb:blue,151;green,85;red,47}] at (11.75,0.7) {\fontsize{50}{60}\selectfont{\bf APMO}};
+\draw[line width=2pt,color={rgb:blue,151;green,85;red,47}] (8.85,0) -- +(5.8,0);
+\filldraw[white] (11.75,-1) circle (1.45);
+\node at (11.75,-1) {\includegraphics[width=3cm]{pacific.png}};
+\filldraw[color={rgb:blue,151;green,85;red,47}] (1.6,-0.35) -- +(0,-0.35) -- +(-0.35,-0.35) -- +(-0.35,0) -- cycle;
+\filldraw[color={rgb:blue,151;green,85;red,47}] (1.6,-1.55) -- +(0,-0.35) -- +(-0.35,-0.35) -- +(-0.35,0) -- cycle;
+\filldraw[color={rgb:blue,151;green,85;red,47}] (21.9,-0.35) -- +(0,-0.35) -- +(0.35,-0.35) -- +(0.35,0) -- cycle;
+\filldraw[color={rgb:blue,151;green,85;red,47}] (21.9,-1.55) -- +(0,-0.35) -- +(0.35,-0.35) -- +(0.35,0) -- cycle;
+\node at (1,-14) {\includegraphics{signature.png}};
+\node[color={rgb:red,10;green,2}] at (1,-15) {\fontfamily{phv}\selectfont\textsc{Carlos Yuzo Shine}};
+\node[color=blue] at (1,-15.5) {\fontfamily{phv}\selectfont\textsc{Chair of the Organizing Committee}};
+\end{tikzpicture}
+
+\vspace{3.5cm}
+\definecolor{myorange}{rgb}{0.8,0.2,0}
+\begin{center}\fontfamily{phv}\selectfont
+\textcolor{myorange}{\Large\textsc{This is to certify that}}\vspace{1cm}\\
+\textcolor{blue}{\Huge\textbf{$student}}\vspace{1cm}\\
+\textcolor{myorange}{\Large\textsc{achieved a}}\bigskip\\
+\textcolor{blue}{\LARGE\textbf{$award}}\vspace{1cm}\\
+\textcolor{myorange}{\Large\textsc{for}}\bigskip\\
+\textcolor{blue}{\LARGE\textbf{$country}}\vspace{0.9cm}\\
+\textcolor{myorange}{\Large\textsc{in the}}\bigskip\\
+\textcolor{blue}{\Large\textsc{XXXV Asian Pacific Mathematical Olympiad, 2023}}
+\end{center}
+
+\end{document}
